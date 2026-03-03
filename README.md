@@ -23,6 +23,10 @@ PASS Test 4 - cap with count + a/an correction + punctuation
 4/4 tests passed
 ```
 
+You can copy the script to your file using the command
+
+`curl -o go-reloaded.py https://raw.githubusercontent.com/zt4ff/01-edu-audit-scripts/main/scripts/go-reloaded.py`
+
 ## _Disclaimer_
 
 Please read the scripts before running it. We try as much as possible to open and we have a number of maintainers reviewing the scripts and ensuring it's simple and effective.
