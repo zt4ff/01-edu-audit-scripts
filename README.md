@@ -4,7 +4,7 @@ This repo is a collection of scripts for the purpose of automating the process f
 
 ## How to use it
 
-Let's say you're an auditor for `go-reloaded`, you can copy the script in [go-reloaded.py](./go-reloaded.py) to the directory of the code you want to audit and run:
+Let's say you're an auditor for `go-reloaded`, you can copy the script in [go-reloaded.py](./scripts/go-reloaded.py) to the directory of the code you want to audit and run:
 
 `python go-reloaded.py`
 
