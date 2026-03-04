@@ -20,7 +20,32 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 Now you should able to run `auditor version` to verify it runs
 
-## How to use it
+## Usage
+
+```bash
+auditor <project-name> --script=<language>
+```
+
+### Examples
+
+```bash
+# Fetch the Python version of go-reloaded
+auditor go-reloaded --script=py
+
+# Fetch the Go version
+auditor go-reloaded --script=go
+
+# Fetch the Bash version and save to a custom path
+auditor go-reloaded --script=bash --output=./tests/script.sh
+
+# Use a fork or mirror
+auditor go-reloaded --script=py --repo=https://raw.githubusercontent.com/your-fork/01-edu-audit-scripts/main
+
+# List supported languages
+auditor list
+```
+
+### Using the Fetched Script
 
 Let's say you're an auditor for `go-reloaded`, you can run the command `auditor go-reloaded` then run:
 
@@ -41,14 +66,30 @@ PASS Test 4 - cap with count + a/an correction + punctuation
 4/4 tests passed
 ```
 
-You can copy the script to your file using the command
+## Supported Languages
 
-`curl -o go-reloaded.py https://raw.githubusercontent.com/zt4ff/01-edu-audit-scripts/main/scripts/go-reloaded.py`
+| Flag   | Extension |
+| ------ | --------- |
+| `py`   | `.py`     |
+| `go`   | `.go`     |
+| `bash` | `.sh`     |
+
+## URL Pattern
+
+Scripts are fetched from:
+
+```
+https://raw.githubusercontent.com/zt4ff/01-edu-audit-scripts/main/scripts/<lang>/<file-name>.<ext>
+```
 
 ## _Disclaimer_
 
 Please read the scripts before running it. We try as much as possible to open and we have a number of maintainers reviewing the scripts and ensuring it's simple and effective.
 
-##
+## Contributing
 
-`go install github.com/zt4ff/01-edu-audit-scripts/auditor/cmd/auditor@latest`
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+[MIT](LICENSE)
