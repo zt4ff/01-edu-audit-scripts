@@ -5,6 +5,7 @@ A CLI tool to fetch audit test scripts from [01-edu-audit-scripts](https://githu
 ## Install
 
 ### Via PPA (Ubuntu/Debian)
+
 ```bash
 sudo add-apt-repository ppa:zt4ff/auditor
 sudo apt update
@@ -12,8 +13,9 @@ sudo apt install auditor
 ```
 
 ### From source
+
 ```bash
-git clone https://github.com/zt4ff/auditor.git
+git clone github.com/zt4ff/01-edu-audit-scripts/
 cd auditor
 make install
 ```
@@ -46,7 +48,7 @@ auditor list
 ## Supported Languages
 
 | Flag   | Extension |
-|--------|-----------|
+| ------ | --------- |
 | `py`   | `.py`     |
 | `go`   | `.go`     |
 | `bash` | `.sh`     |
@@ -54,6 +56,7 @@ auditor list
 ## URL Pattern
 
 Scripts are fetched from:
+
 ```
 https://raw.githubusercontent.com/zt4ff/01-edu-audit-scripts/main/scripts/<lang>/<file-name>.<ext>
 ```
