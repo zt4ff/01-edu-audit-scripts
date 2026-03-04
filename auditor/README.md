@@ -4,6 +4,22 @@ A CLI tool to fetch audit test scripts from [01-edu-audit-scripts](https://githu
 
 ## Install
 
+### Via Go
+
+```bash
+go install github.com/zt4ff/01-edu-audit-scripts/auditor/cmd/auditor@latest
+```
+
+Try running `auditor --help`
+
+If it doesn't work trying running the command
+
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+Now you should able to run `auditor --help` to verify it runs
+
 ### Via PPA (Ubuntu/Debian)
 
 ```bash
