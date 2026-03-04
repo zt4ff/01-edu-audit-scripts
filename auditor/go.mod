@@ -1,4 +1,4 @@
-module github.com/zt4ff/auditor
+module github.com/zt4ff/01-edu-audit-scripts/auditor
 
 go 1.22
 

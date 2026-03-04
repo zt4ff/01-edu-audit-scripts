@@ -30,3 +30,7 @@ You can copy the script to your file using the command
 ## _Disclaimer_
 
 Please read the scripts before running it. We try as much as possible to open and we have a number of maintainers reviewing the scripts and ensuring it's simple and effective.
+
+##
+
+`go install github.com/zt4ff/01-edu-audit-scripts/auditor/cmd/auditor@latest`

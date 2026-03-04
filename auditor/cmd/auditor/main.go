@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/zt4ff/auditor/internal/fetcher"
-	"github.com/zt4ff/auditor/internal/resolver"
+	"github.com/zt4ff/01-edu-audit-scripts/auditor/internal/fetcher"
+	"github.com/zt4ff/01-edu-audit-scripts/auditor/internal/resolver"
 )
 
 var (
