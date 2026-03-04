@@ -12,10 +12,11 @@ go install github.com/zt4ff/01-edu-audit-scripts/auditor/cmd/auditor@latest
 
 Try running `auditor version`
 
-If it doesn't work trying running the command
+If it doesn't work trying running the commands
 
 ```bash
-export PATH=$PATH:$(go env GOPATH)/bin
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 Now you should able to run `auditor version` to verify it runs
