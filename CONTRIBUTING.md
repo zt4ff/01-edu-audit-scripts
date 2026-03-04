@@ -9,7 +9,7 @@ Click the **Fork** button at the top right of this page to create your own copy 
 ## 2. Clone your fork
 
 ```bash
-git clone https://github.com/your-username/01-edu-audit-scripts.git
+git clone https://github.com/zt4ff/01-edu-audit-scripts.git
 cd 01-edu-audit-scripts
 ```
 
@@ -35,7 +35,7 @@ git commit -m "Brief description of what you changed"
 ## 6. Push to your fork
 
 ```bash
-git push origin fix-typo-in-readme
+git push origin add-quad-checker-script
 ```
 
 ## 7. Open a Pull Request
