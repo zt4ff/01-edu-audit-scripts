@@ -161,7 +161,8 @@ check(10, '"1a\"#FdwHywR&/()="', "1a\"#FdwHywR&/()=", "TODO")
 # Test 11 - "{|}~"
 check(11, '"{|}~"', "{|}~", "TODO")
 
-
+# Test 12 - "[\]^_ 'a"
+check(12, "[\]^_ 'a", "[\]^_ 'a", "TODO")
 
 # Test 13 - "RGB"
 check(13, '"RGB"', "RGB", "TODO")
