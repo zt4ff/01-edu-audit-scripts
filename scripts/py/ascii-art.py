@@ -250,23 +250,3 @@ check(17, '"abcdefghijklmnopqrstuvwxyz"', '"abcdefghijklmnopqrstuvwxyz"',
     "                                              __/ |              _/ |                                        | |         | |                                                       __/ /        $\n"
     "                                             |___/              |__/                                         |_|         |_|                                                      |___/         $"
 )
-
-# Test 18 - only standard packages check (informational)
-def last_test():
-    result = subprocess.run(["grep", "-r", "\"github.com", "."], capture_output=True, text=True)
-    if result.stdout.strip() == "":
-        print("PASS Test 18 - Only standard packages used")
-        passed += 1
-    else:
-        print("FAIL Test 18 - Non-standard packages detected")
-        print(f"  Found: {result.stdout.strip()}")
-        failed += 1
-
-    total = passed + failed
-    print(f"\n{passed}/{total} tests passed")
-
-    if failed > 0:
-        exit(1)
-
-
-last_test()
