@@ -7,7 +7,7 @@ failed = 0
 
 def run(arg):
     result = subprocess.run(
-        ["bash", "-c", f'go run . "{arg}"'],
+        ["bash", "-c", f'go run . "{arg}" | cat -e'],
         capture_output=True,
         text=True
     )
@@ -156,7 +156,7 @@ check(9, '"MaD3IrA&LiSboN"', "MaD3IrA&LiSboN",
 )
 
 # Test 10 - '1a\"#FdwHywR&/()='
-check(10, """'1a\\"#FdwHywR&/()=' mixed chars""", """'1a\\"#FdwHywR&/()='""",
+check(10, """'1a\\"#FdwHywR&/()=' mixed chars""", '1a\\"#FdwHywR&/()=',
     "             _ _     _  _     ______       _              _    _                      _____                 __   __ __            $\n"
     " _          ( | )  _| || |_  |  ____|     | |            | |  | |                    |  __ \\    ___        / /  / / \\ \\   ______  $\n"
     "/ |   __ _   V V  |_  __  _| | |__      __| | __      __ | |__| |  _   _  __      __ | |__) |  ( _ )      / /  | |   | | |______| $\n"
