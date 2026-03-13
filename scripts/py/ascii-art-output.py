@@ -67,7 +67,7 @@ def check_no_file(test_num, description, cmd, unexpected_file):
         failed += 1
 
 
-# ── Test 0 — wrong flag format: should print usage message, no file ───
+# ── Test 0 — wrong flag format: should print usage message, no file 
 check_no_file(
     0,
     "Wrong flag format (--output without =filename) → usage message, no file",
@@ -75,7 +75,7 @@ check_no_file(
     "test00.txt",
 )
 
-# ── Test 1 — "First\nTest" shadow ─────────────────────────────────────
+# ── Test 1 — "First\nTest" shadow 
 check_output_file(
     1,
     '"First\\nTest" shadow → file matches expected',
@@ -97,7 +97,7 @@ check_output_file(
     "                               $",
 )
 
-# ── Test 2 — "hello" standard ─────────────────────────────────────────
+# ── Test 2 — "hello" standard 
 check_output_file(
     2,
     '"hello" standard → file matches expected',
@@ -113,7 +113,7 @@ check_output_file(
     "                               $",
 )
 
-# ── Test 3 — "123 -> #$%" standard ───────────────────────────────────
+# ── Test 3 — "123 -> #$%" standard 
 check_output_file(
     3,
     '"123 -> #$%" standard → file matches expected',
@@ -129,7 +129,7 @@ check_output_file(
     "                                                                           $",
 )
 
-# ── Test 4 — "432 -> #$%&@" shadow ───────────────────────────────────
+# ── Test 4 — "432 -> #$%&@" shadow 
 check_output_file(
     4,
     '"432 -> #$%&@" shadow → file matches expected',
@@ -145,7 +145,7 @@ check_output_file(
     "                                                                                                  $",
 )
 
-# ── Test 5 — "There" shadow ───────────────────────────────────────────
+# ── Test 5 — "There" shadow 
 check_output_file(
     5,
     '"There" shadow → file matches expected',
@@ -160,7 +160,7 @@ check_output_file(
     "                                     $",
 )
 
-# ── Test 6 — '123 -> "#$%@"' thinkertoy ──────────────────────────────
+# ── Test 6 — '123 -> "#$%@"' thinkertoy 
 check_output_file(
     6,
     '"123 -> \\"#$%@\\" thinkertoy → file matches expected',
@@ -175,7 +175,7 @@ check_output_file(
     "                                                                        $",
 )
 
-# ── Test 7 — "2 you" thinkertoy ───────────────────────────────────────
+# ── Test 7 — "2 you" thinkertoy 
 check_output_file(
     7,
     '"2 you" thinkertoy → file matches expected',
@@ -190,7 +190,7 @@ check_output_file(
     "                        $",
 )
 
-# ── Test 8 — "Testing long output!" standard ──────────────────────────
+# ── Test 8 — "Testing long output!" standard 
 check_output_file(
     8,
     '"Testing long output!" standard → file matches expected',
@@ -206,7 +206,7 @@ check_output_file(
     "                                                   |___/                         |___/                                   |_|               $",
 )
 
-# ── Test 9 — "HeLLo WoRLd" standard ──────────────────────────────────
+# ── Test 9 — "HeLLo WoRLd" standard 
 check_output_file(
     9,
     '"HeLLo WoRLd" random upper/lower → file matches expected',
@@ -222,7 +222,7 @@ check_output_file(
     "                                                                                    $",
 )
 
-# ── Test 10 — "hello 42 world" standard ──────────────────────────────
+# ── Test 10 — "hello 42 world" standard 
 check_output_file(
     10,
     '"hello 42 world" lower + digits + spaces → file matches expected',
@@ -238,7 +238,7 @@ check_output_file(
     "                                                                                            $",
 )
 
-# ── Test 11 — "{Hello & There #}" standard ───────────────────────────
+# ── Test 11 — "{Hello & There #}" standard 
 check_output_file(
     11,
     '"{Hello & There #}" special characters → file matches expected',
@@ -254,7 +254,7 @@ check_output_file(
     "                                                                                                                         $",
 )
 
-# ── Test 12 — "Hello World 123" standard ─────────────────────────────
+# ── Test 12 — "Hello World 123" standard 
 check_output_file(
     12,
     '"Hello World 123" lower + upper + spaces + numbers → file matches expected',
@@ -270,7 +270,7 @@ check_output_file(
     "                                                                                                                    $",
 )
 
-# ── Test 13 — no flag (plain stdout) ─────────────────────────────────
+# ── Test 13 — no flag (plain stdout) 
 def check_stdout(test_num, description, cmd, expected):
     global passed, failed
     stdout, _ = run_cmd(cmd)
@@ -299,11 +299,11 @@ check_stdout(
     "                               $",
 )
 
-# ── Summary ───────────────────────────────────────────────────────────
+# ── Summary ─
 print()
 print(f"{passed} passed, {failed} failed out of {passed + failed} tests.")
 
-# ── Cleanup ───────────────────────────────────────────────────────────
+# ── Cleanup ─
 for f in created_files:
     if os.path.exists(f):
         os.remove(f)
